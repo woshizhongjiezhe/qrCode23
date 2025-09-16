@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>零界演化 - SingularityX Evolution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 背景动态色块 -->
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text" data-zh="零界演化" data-en="SingularityX">零界演化</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link" data-zh="首页" data-en="Home">首页</a>
+                <a href="#about" class="nav-link" data-zh="关于我们" data-en="About">关于我们</a>
+                <a href="#business" class="nav-link" data-zh="业务介绍" data-en="Business">业务介绍</a>
+                <a href="#careers" class="nav-link" data-zh="人才招聘" data-en="Careers">人才招聘</a>
+                <a href="#contact" class="nav-link" data-zh="联系我们" data-en="Contact">联系我们</a>
+            </div>
+            <button class="lang-toggle" onclick="toggleLanguage()">
+                <span id="lang-text">EN</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 英雄区块 -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title" data-zh="零界演化" data-en="SingularityX Evolution">零界演化</h1>
+                    <p class="hero-subtitle" data-zh="AI 原生智能协同生态" data-en="AI-Native Intelligent Collaborative Ecosystem">AI 原生智能协同生态</p>
+                    <p class="hero-description" data-zh="以区块链、智能合约、Shapley Value公平分配机制为基础的开放组织，致力于构建AI原生涌现组织模型，推动人类智慧与人工智能的深度融合。" data-en="An open organization based on blockchain, smart contracts, and Shapley Value fair allocation mechanism, dedicated to building AI-native emergent organizational models and promoting deep integration of human intelligence and artificial intelligence.">以区块链、智能合约、Shapley Value公平分配机制为基础的开放组织，致力于构建AI原生涌现组织模型，推动人类智慧与人工智能的深度融合。</p>
+                    <div class="hero-actions">
+                        <button class="cta-button primary" data-zh="了解更多" data-en="Learn More">了解更多</button>
+                        <button class="cta-button secondary" data-zh="加入我们" data-en="Join Us">加入我们</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="neural-animation">
+                        <canvas id="neuralCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- 关于我们 -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" data-zh="关于我们" data-en="About Us">关于我们</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <div class="text-block">
+                            <h3 data-zh="价值观" data-en="Values">价值观</h3>
+                            <p data-zh="我们坚信效率不等于牺牲，智慧源于涌现秩序。通过分布式智能协同 + 区块链底座，确保每一份真实贡献都能被量化和公平激励。" data-en="We believe efficiency does not mean sacrifice, and wisdom arises from emergent order. With distributed collaboration empowered by blockchain, every genuine contribution is recognized, quantified, and fairly rewarded.">我们坚信效率不等于牺牲，智慧源于涌现秩序。通过分布式智能协同 + 区块链底座，确保每一份真实贡献都能被量化和公平激励。</p>
+                        </div>
+                        <div class="text-block">
+                            <h3 data-zh="使命" data-en="Mission">使命</h3>
+                            <p data-zh="构建一个能够自学习、自进化、自组织的智能协同生态，推动技术与文明的共同演化。" data-en="To create an ecosystem capable of self-learning, self-evolution, and self-organization, driving the co-evolution of technology and civilization.">构建一个能够自学习、自进化、自组织的智能协同生态，推动技术与文明的共同演化。</p>
+                        </div>
+                        <div class="text-block">
+                            <h3 data-zh="愿景" data-en="Vision">愿景</h3>
+                            <p data-zh="成为全球领先的AI原生金融与协作系统平台，为技术奇点时代提供可落地的基础设施和开放生态。" data-en="To become a global leader in AI-native financial and collaboration systems, delivering infrastructure and open ecosystems for the singularity era.">成为全球领先的AI原生金融与协作系统平台，为技术奇点时代提供可落地的基础设施和开放生态。</p>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="floating-card">
+                            <div class="card-icon">🤖</div>
+                            <h4 data-zh="智能协同" data-en="Intelligent Collaboration">智能协同</h4>
+                            <p data-zh="AI + 人类智慧深度融合" data-en="Deep integration of AI and human intelligence">AI + 人类智慧深度融合</p>
+                        </div>
+                        <div class="floating-card">
+                            <div class="card-icon">🔗</div>
+                            <h4 data-zh="区块链底座" data-en="Blockchain Foundation">区块链底座</h4>
+                            <p data-zh="去中心化信任与价值分配" data-en="Decentralized trust and value distribution">去中心化信任与价值分配</p>
+                        </div>
+                        <div class="floating-card">
+                            <div class="card-icon">⚡</div>
+                            <h4 data-zh="自演化系统" data-en="Self-Evolution">自演化系统</h4>
+                            <p data-zh="持续学习与进化能力" data-en="Continuous learning and evolution">持续学习与进化能力</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 业务介绍 -->
+        <section id="business" class="business-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" data-zh="业务介绍" data-en="Business Overview">业务介绍</h2>
+                </div>
+                <div class="business-content">
+                    <div class="business-main">
+                        <h3 data-zh="核心业务" data-en="Core Business">核心业务</h3>
+                        <p data-zh="零界演化科技专注自演化人工智能系统与智能量化交易平台，致力于构建"智能体 × 策略 × 资本"融合生态，打造自我进化的金融科技超级系统。" data-en="SingularityX Evolution focuses on self-evolving AI systems and intelligent quantitative trading platforms, committed to building an integrated ecosystem of 'Agents × Strategies × Capital' to create a self-evolving fintech super system.">零界演化科技专注自演化人工智能系统与智能量化交易平台，致力于构建"智能体 × 策略 × 资本"融合生态，打造自我进化的金融科技超级系统。</p>
+                    </div>
+                    <div class="business-grid">
+                        <div class="business-card">
+                            <div class="card-header">
+                                <div class="card-icon">👥</div>
+                                <h4 data-zh="团队实力" data-en="Team Strength">团队实力</h4>
+                            </div>
+                            <p data-zh="汇聚浙大、清华等高校人才，成员来自阿里、华为等前沿团队，具备10年以上金融衍生品及大宗商品交易经验，曾参与08奥运会项目开发。" data-en="Gathering talents from prestigious universities like Zhejiang University and Tsinghua University, with team members from leading companies like Alibaba and Huawei, possessing over 10 years of experience in financial derivatives and commodity trading, with participation in 2008 Olympics project development.">汇聚浙大、清华等高校人才，成员来自阿里、华为等前沿团队，具备10年以上金融衍生品及大宗商品交易经验，曾参与08奥运会项目开发。</p>
+                        </div>
+                        <div class="business-card">
+                            <div class="card-header">
+                                <div class="card-icon">🔬</div>
+                                <h4 data-zh="科研合作" data-en="Research Collaboration">科研合作</h4>
+                            </div>
+                            <p data-zh="与知名大学共建联合实验室，深耕"智能体博弈演化系统""高频量化引擎"等前沿领域。" data-en="Establishing joint laboratories with renowned universities, deeply cultivating cutting-edge fields such as 'Agent Game Evolution Systems' and 'High-Frequency Quantitative Engines'.">与知名大学共建联合实验室，深耕"智能体博弈演化系统""高频量化引擎"等前沿领域。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 人才招聘 -->
+        <section id="careers" class="careers-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" data-zh="人才招聘" data-en="Careers">人才招聘</h2>
+                    <p class="section-subtitle" data-zh="与顶尖的AI、量化交易系统和协同架构一同成长" data-en="Grow together with cutting-edge AI, quantitative trading systems, and collaborative architectures">与顶尖的AI、量化交易系统和协同架构一同成长</p>
+                </div>
+                <div class="careers-grid">
+                    <div class="job-card">
+                        <h4 data-zh="大模型量化算法工程师" data-en="Large Model Quantitative Algorithm Engineer">大模型量化算法工程师</h4>
+                        <div class="job-details">
+                            <div class="job-responsibility">
+                                <span class="label" data-zh="职责：" data-en="Responsibilities:">职责：</span>
+                                <span data-zh="大模型量化策略设计与算法开发，利用大模型、多模态技术和强化学习推进AI投资与AIGC。" data-en="Design quantitative strategies and develop algorithms based on large models, multimodal technologies, and reinforcement learning for AI investment and AIGC.">大模型量化策略设计与算法开发，利用大模型、多模态技术和强化学习推进AI投资与AIGC。</span>
+                            </div>
+                            <div class="job-requirement">
+                                <span class="label" data-zh="要求：" data-en="Requirements:">要求：</span>
+                                <span data-zh="熟悉大模型原理与应用，具备量化算法开发经验。" data-en="Proficiency in large model applications with experience in quantitative algorithm development.">熟悉大模型原理与应用，具备量化算法开发经验。</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card">
+                        <h4 data-zh="大模型金融数据研究员" data-en="Financial Data Researcher (Large Models)">大模型金融数据研究员</h4>
+                        <div class="job-details">
+                            <div class="job-responsibility">
+                                <span class="label" data-zh="职责：" data-en="Responsibilities:">职责：</span>
+                                <span data-zh="利用大模型及相关工具，搭建金融时间序列数据库方案及智能workflow/agent。" data-en="Build financial time-series data solutions and workflow/agent design using large models and related tools.">利用大模型及相关工具，搭建金融时间序列数据库方案及智能workflow/agent。</span>
+                            </div>
+                            <div class="job-requirement">
+                                <span class="label" data-zh="要求：" data-en="Requirements:">要求：</span>
+                                <span data-zh="掌握大模型与数据建模方法，具备金融数据分析经验。" data-en="Expertise in large models and data modeling, with experience in financial data analysis.">掌握大模型与数据建模方法，具备金融数据分析经验。</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card">
+                        <h4 data-zh="RL金融量化算法工程师" data-en="RL Quantitative Algorithm Engineer">RL金融量化算法工程师</h4>
+                        <div class="job-details">
+                            <div class="job-responsibility">
+                                <span class="label" data-zh="职责：" data-en="Responsibilities:">职责：</span>
+                                <span data-zh="持续优化开源强化学习量化模型，根据实际目标进行方案迭代。" data-en="Continuously optimize open-source RL-based quantitative models and iterate solutions based on real objectives.">持续优化开源强化学习量化模型，根据实际目标进行方案迭代。</span>
+                            </div>
+                            <div class="job-requirement">
+                                <span class="label" data-zh="要求：" data-en="Requirements:">要求：</span>
+                                <span data-zh="熟悉RL方法，能将算法应用于金融量化策略优化。" data-en="Strong foundation in reinforcement learning and its applications in quantitative finance.">熟悉RL方法，能将算法应用于金融量化策略优化。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 福利待遇 -->
+                <div class="benefits-section">
+                    <h3 class="benefits-title" data-zh="福利待遇" data-en="Benefits">福利待遇</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💰</div>
+                            <div class="benefit-content">
+                                <h4 data-zh="薪资待遇" data-en="Salary">薪资待遇</h4>
+                                <p data-zh="极具竞争力的年薪，硕士岗位" data-en="Highly competitive annual salary for master's positions">极具竞争力的年薪，硕士岗位</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🏠</div>
+                            <div class="benefit-content">
+                                <h4 data-zh="住宿保障" data-en="Accommodation">住宿保障</h4>
+                                <p data-zh="提供住宿（上班步行10分钟，男女独立空间）" data-en="Accommodation provided (10-minute walk to office, separate spaces for men and women)">提供住宿（上班步行10分钟，男女独立空间）</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🛡️</div>
+                            <div class="benefit-content">
+                                <h4 data-zh="保险福利" data-en="Insurance">保险福利</h4>
+                                <p data-zh="六险一金（含商业险）" data-en="Six insurances and one fund (including commercial insurance)">六险一金（含商业险）</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">⏰</div>
+                            <div class="benefit-content">
+                                <h4 data-zh="工作时间" data-en="Work Hours">工作时间</h4>
+                                <p data-zh="周一至周五 8:30-17:30（周末双休，弹性工作制）" data-en="Monday to Friday 8:30-17:30 (weekends off, flexible work system)">周一至周五 8:30-17:30（周末双休，弹性工作制）</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🎯</div>
+                            <div class="benefit-content">
+                                <h4 data-zh="生活补贴" data-en="Living Allowance">生活补贴</h4>
+                                <p data-zh="提供交通、餐饮、电话补贴" data-en="Transportation, meal, and phone allowances provided">提供交通、餐饮、电话补贴</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🎉</div>
+                            <div class="benefit-content">
+                                <h4 data-zh="活动福利" data-en="Activities">活动福利</h4>
+                                <p data-zh="丰富多彩的活动及各种节日福利" data-en="Rich and colorful activities and various holiday benefits">丰富多彩的活动及各种节日福利</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💊</div>
+                            <div class="benefit-content">
+                                <h4 data-zh="健康关怀" data-en="Health Care">健康关怀</h4>
+                                <p data-zh="员工定期体检、国内外旅游" data-en="Regular employee health checkups, domestic and international travel">员工定期体检、国内外旅游</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🚀</div>
+                            <div class="benefit-content">
+                                <h4 data-zh="发展机会" data-en="Development">发展机会</h4>
+                                <p data-zh="提供海外深造机会" data-en="Overseas study opportunities provided">提供海外深造机会</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系我们 -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" data-zh="联系我们" data-en="Contact Us">联系我们</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3 data-zh="邮箱联系" data-en="Email Contact">邮箱联系</h3>
+                        <p>join@singularityx.tech</p>
+                        <button class="contact-button" data-zh="发送邮件" data-en="Send Email">发送邮件</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
